@@ -1,21 +1,44 @@
-Automatic Speech Recognition for Gujarati Language
+# Automatic Speech Recognition for Gujarati Language
 
-This Model can be used to recognize any language as long the necessory changes are made to Corpora.py file.
+Code to Train a Model for gujarati text to speech using the Microsoft Research Open Data
 
-The Current File Structure expects there to be 
+https://msropendata.com/datasets/7230b4b1-912d-400e-be58-f84e0512985e
 
--Root\n
----gu-in-Test\n
+This Model can be used to recognize any language as long the necessary changes are made to Corpora.py file.
 
--------/transcription.csv\n
--------/Audios
----gu-in-Train
--------/Audios
+## Setup
+Ensure that the Following File Structure is present
+
+-Root
+
+---gu-in-Test
+
 -------/transcription.csv
 
-Where Audios folders need to have the audio files , in a format that can be read by librosa.load
-The Transcription need to follow the following format
+-------/Audios
 
-000010001	?????? ????????? ???? ?????? ?? ??? ??
-000010002	? ??????? ??????????? ????? ??????? ????? ??? ????????? ?????????? ??????????? ?? ????? ???
+---gu-in-Train
 
+-------/Audios
+
+-------/transcription.csv
+
+## Initialize
+```
+
+python read_dataset.py
+
+```
+## Training 
+```
+python model_train.py
+```
+## Testing
+```
+
+python test_model.py
+
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
